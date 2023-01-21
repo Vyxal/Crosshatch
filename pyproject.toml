@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "vyxal-crosshatch"
+name = "crosshatch"
 version = "0.1.0"
 description = "A pretty REPL for Vyxal."
 authors = ["Ginger < 75683114+GingerIndustries@users.noreply.github.com>"]
@@ -12,6 +12,9 @@ rich = "^13.2.0"
 [tool.poetry.dev-dependencies]
 debugpy = "^1.6.2"
 replit-python-lsp-server = {extras = ["yapf", "rope", "pyflakes"], version = "^1.5.9"}
+
+[tool.poetry.scripts]
+crosshatch = "crosshatch:run"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

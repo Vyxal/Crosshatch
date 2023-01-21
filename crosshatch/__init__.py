@@ -21,4 +21,7 @@ class CrosshatchREPL:
             except (EOFError, KeyboardInterrupt):
                 self.console.print("\n[dim italic]See you, space cowboy...")
                 break
-            
+
+def run():
+    repl = CrosshatchREPL()
+    repl.run()
