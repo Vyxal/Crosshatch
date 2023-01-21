@@ -2,11 +2,12 @@ import vyxal
 
 from rich.console import Console
 
+import importlib.metadata
 import readline
 import sys
 
-__version__ = "0.1.0"
-GREETING = f'''[bold purple]Vyxal 0.0.0[/bold purple] using Python {sys.version} on {sys.platform}. 
+__version__ = importlib.metadata.version("vyxal")
+GREETING = f'''[bold purple]Vyxal {__version__}[/bold purple] using Python {sys.version} on {sys.platform}. 
 Type [dim]!!/help[/dim] for more information.\n'''
 
 class CrosshatchREPL:
