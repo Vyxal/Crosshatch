@@ -6,7 +6,7 @@ authors = ["Ginger < 75683114+GingerIndustries@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.11"
-vyxal = "^2.18.5"
+vyxal = "^2.18"
 rich = "^13.2.0"
 
 [tool.poetry.dev-dependencies]
