@@ -6,8 +6,9 @@ import importlib.metadata
 import readline
 import sys
 
-__version__ = importlib.metadata.version("vyxal")
-GREETING = f'''[bold purple]Vyxal {__version__}[/bold purple] using Python {sys.version} on {sys.platform}. 
+__version__ = "0.1.0"
+VYXAL_VERSION = importlib.metadata.version("vyxal")
+GREETING = f'''[bold purple]Vyxal {vyxal_version}[/bold purple] using Python {sys.version} on {sys.platform}. 
 Type [dim]!!/help[/dim] for more information.\n'''
 
 class CrosshatchREPL:
