@@ -2,7 +2,7 @@
 name = "crosshatch"
 version = "0.1.0"
 description = "A pretty REPL for Vyxal."
-authors = ["Ginger < 75683114+GingerIndustries@users.noreply.github.com>"]
+authors = ["Ginger <75683114+GingerIndustries@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.11"
