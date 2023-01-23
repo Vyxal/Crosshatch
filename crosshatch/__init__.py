@@ -91,6 +91,11 @@ class CrosshatchREPL:
                 self.console.print("\n[dim italic]See you, space cowboy...")
                 break
             else:
+                if command == "lyxal":
+                    self.console.print("we do a little trolling")
+                    import webbrowser
+                    webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+                    continue
                 self.runVyxal(command)
 def run():
     repl = CrosshatchREPL()
