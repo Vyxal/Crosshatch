@@ -13,7 +13,6 @@ import importlib.metadata
 import sys
 import readline
 import traceback
-import os
 
 from crosshatch.highlighter import VYXAL_DEFAULT, VyxalHighlighter
 from crosshatch.help import HELP_MARKDOWN
@@ -93,11 +92,10 @@ class CrosshatchREPL:
                 break
             else:
                 if command == "lyxal":
-                    try:
-                        os.system(r"curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash")
-                    finally:
-                        self.console.clear()
-                        break
+                    self.console.print("we do a little trolling")
+                    import webbrowser
+                    webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+                    continue
                 self.runVyxal(command)
 def run():
     repl = CrosshatchREPL()
