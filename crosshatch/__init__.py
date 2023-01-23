@@ -45,7 +45,7 @@ class CrosshatchREPL:
         } | vyxal.elements.__dict__ | vyxal.helpers.__dict__
     def highlightCommand(self, command: str):
         self.console.print(Control((ControlType.CURSOR_UP, 1), (ControlType.ERASE_IN_LINE, 2)))
-        self.console.print(f"[bold purple]{self.lineno}[/bold purple] <= ", end = "")
+        self.console.print(f"[bold green]{self.lineno}[/bold green] <= ", end = "")
         self.console.print(self.vyxalHighlighter(command), end = "")
         self.console.print(Control((ControlType.CURSOR_MOVE_TO_COLUMN, 0), (ControlType.CURSOR_DOWN, 1),))
     def printErrorTraceback(self, tb, vyxal, code):
@@ -80,6 +80,7 @@ class CrosshatchREPL:
                     self.console.print(f"[bold purple]{self.lineno}[/bold purple] => ", end = "")
                     self.console.print(line)
             self.lineno += 1
+            self.stack.clear()
 
     def run(self):
         self.console.print(GREETING)
@@ -89,8 +90,6 @@ class CrosshatchREPL:
             except (EOFError, KeyboardInterrupt):
                 self.console.print("\n[dim italic]See you, space cowboy...")
                 break
-            if command.startswith("!!/"):
-                pass
             else:
                 self.runVyxal(command)
 def run():
