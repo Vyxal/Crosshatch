@@ -54,7 +54,7 @@ class CrosshatchREPL:
                     self.console.print(f"[dim]|[/dim]  ", end = "")
                 self.console.print(line)
     def runVyxal(self, vyxal):
-        self.highlightCommand(vyxal)
+        vyxal = "\n".join(vyxal)
         code = transpile(vyxal, self.transpilationOpts)
         try:
             exec(code, self.prepareLocals())
@@ -83,10 +83,10 @@ class CrosshatchREPL:
 
     def run(self):
         self.console.print(GREETING)
+        commandList = []
         while True:
-            self.console.print("vyxal> ")
             try:
-                command = sys.stdin.readline()
+                command = input(f"[{self.lineno}] ..." if len(commandList) else f"[{self.lineno}] vyxal> ")
             except KeyboardInterrupt:
                 self.console.print(Control((ControlType.ERASE_IN_LINE, 2), (ControlType.CURSOR_MOVE_TO_COLUMN, 0)), end = "")
                 continue
@@ -94,6 +94,7 @@ class CrosshatchREPL:
                 self.console.print(GOODBYE)
                 break
             else:
+                
                 if command == "lyxal":
                     self.console.print("we do a little trolling")
                     import webbrowser
@@ -102,4 +103,19 @@ class CrosshatchREPL:
                 if command.startswith("##"):
                     self.runCommand(command)
                 else:
-                    self.runVyxal(command)
+                    if len(commandList):
+                        if command == "":
+                            self.console.print(Control((ControlType.CURSOR_UP, 1), (ControlType.ERASE_IN_LINE, 2), (ControlType.CURSOR_MOVE_TO_COLUMN, 0)))
+                            self.runVyxal(commandList)
+                            commandList.clear()
+                        else:
+                            commandList.append(command)
+                            self.highlightCommand(command)
+                    else:
+                        self.highlightCommand(command)
+                        commandList.append(command)
+                        if not command.endswith("  "):
+                            self.runVyxal(commandList)
+                            commandList.clear()
+                        
+                    
