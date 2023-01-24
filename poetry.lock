@@ -6,6 +6,11 @@ category = "dev"
 optional = false
 python-versions = ">=3.7"
 
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
 [[package]]
 name = "docopt"
 version = "0.6.2"
@@ -13,6 +18,11 @@ description = "Pythonic argument parser, that will make you smile"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "jedi"
@@ -26,9 +36,14 @@ python-versions = ">=3.6"
 parso = ">=0.8.0,<0.9.0"
 
 [package.extras]
-docs = ["Jinja2 (==2.11.3)", "MarkupSafe (==1.1.1)", "Pygments (==2.8.1)", "alabaster (==0.7.12)", "babel (==2.9.1)", "chardet (==4.0.0)", "commonmark (==0.8.1)", "docutils (==0.17.1)", "future (==0.18.2)", "idna (==2.10)", "imagesize (==1.2.0)", "mock (==1.0.1)", "packaging (==20.9)", "pyparsing (==2.4.7)", "pytz (==2021.1)", "readthedocs-sphinx-ext (==2.1.4)", "recommonmark (==0.5.0)", "requests (==2.25.1)", "six (==1.15.0)", "snowballstemmer (==2.1.0)", "sphinx-rtd-theme (==0.4.3)", "sphinx (==1.8.5)", "sphinxcontrib-serializinghtml (==1.1.4)", "sphinxcontrib-websupport (==1.2.4)", "urllib3 (==1.26.4)"]
+docs = ["Jinja2 (==2.11.3)", "MarkupSafe (==1.1.1)", "Pygments (==2.8.1)", "alabaster (==0.7.12)", "babel (==2.9.1)", "chardet (==4.0.0)", "commonmark (==0.8.1)", "docutils (==0.17.1)", "future (==0.18.2)", "idna (==2.10)", "imagesize (==1.2.0)", "mock (==1.0.1)", "packaging (==20.9)", "pyparsing (==2.4.7)", "pytz (==2021.1)", "readthedocs-sphinx-ext (==2.1.4)", "recommonmark (==0.5.0)", "requests (==2.25.1)", "six (==1.15.0)", "snowballstemmer (==2.1.0)", "sphinx (==1.8.5)", "sphinx-rtd-theme (==0.4.3)", "sphinxcontrib-serializinghtml (==1.1.4)", "sphinxcontrib-websupport (==1.2.4)", "urllib3 (==1.26.4)"]
 qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
 testing = ["Django (<3.1)", "attrs", "colorama", "docopt", "pytest (<7.0.0)"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "markdown-it-py"
@@ -43,13 +58,18 @@ mdurl = ">=0.1,<1.0"
 
 [package.extras]
 benchmarking = ["psutil", "pytest", "pytest-benchmark (>=3.2,<4.0)"]
-code_style = ["pre-commit (==2.6)"]
+code-style = ["pre-commit (==2.6)"]
 compare = ["commonmark (>=0.9.1,<0.10.0)", "markdown (>=3.3.6,<3.4.0)", "mistletoe (>=0.8.1,<0.9.0)", "mistune (>=2.0.2,<2.1.0)", "panflute (>=2.1.3,<2.2.0)"]
 linkify = ["linkify-it-py (>=1.0,<2.0)"]
 plugins = ["mdit-py-plugins"]
 profiling = ["gprof2dot"]
-rtd = ["attrs", "myst-parser", "pyyaml", "sphinx", "sphinx-copybutton", "sphinx-design", "sphinx-book-theme"]
+rtd = ["attrs", "myst-parser", "pyyaml", "sphinx", "sphinx-copybutton", "sphinx-design", "sphinx_book_theme"]
 testing = ["coverage", "pytest", "pytest-cov", "pytest-regressions"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "mdurl"
@@ -58,6 +78,11 @@ description = "Markdown URL utilities"
 category = "main"
 optional = false
 python-versions = ">=3.7"
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "mpmath"
@@ -68,8 +93,13 @@ optional = false
 python-versions = "*"
 
 [package.extras]
-develop = ["pytest (>=4.6)", "pycodestyle", "pytest-cov", "codecov", "wheel"]
+develop = ["codecov", "pycodestyle", "pytest (>=4.6)", "pytest-cov", "wheel"]
 tests = ["pytest (>=4.6)"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "num2words"
@@ -82,6 +112,11 @@ python-versions = "*"
 [package.dependencies]
 docopt = ">=0.6.2"
 
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
 [[package]]
 name = "numpy"
 version = "1.24.1"
@@ -90,6 +125,11 @@ category = "main"
 optional = false
 python-versions = ">=3.8"
 
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
 [[package]]
 name = "packaging"
 version = "23.0"
@@ -97,6 +137,11 @@ description = "Core utilities for Python packages"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "parso"
@@ -110,6 +155,11 @@ python-versions = ">=3.6"
 qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
 testing = ["docopt", "pytest (<6.0.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
 [[package]]
 name = "platformdirs"
 version = "2.6.2"
@@ -119,8 +169,13 @@ optional = false
 python-versions = ">=3.7"
 
 [package.extras]
-docs = ["furo (>=2022.12.7)", "proselint (>=0.13)", "sphinx-autodoc-typehints (>=1.19.5)", "sphinx (>=5.3)"]
-test = ["appdirs (==1.4.4)", "covdefaults (>=2.2.2)", "pytest-cov (>=4)", "pytest-mock (>=3.10)", "pytest (>=7.2)"]
+docs = ["furo (>=2022.12.7)", "proselint (>=0.13)", "sphinx (>=5.3)", "sphinx-autodoc-typehints (>=1.19.5)"]
+test = ["appdirs (==1.4.4)", "covdefaults (>=2.2.2)", "pytest (>=7.2)", "pytest-cov (>=4)", "pytest-mock (>=3.10)"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "pluggy"
@@ -131,8 +186,13 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-testing = ["pytest-benchmark", "pytest"]
-dev = ["tox", "pre-commit"]
+dev = ["pre-commit", "tox"]
+testing = ["pytest", "pytest-benchmark"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "pyflakes"
@@ -141,6 +201,11 @@ description = "passive checker of Python programs"
 category = "dev"
 optional = false
 python-versions = ">=3.6"
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "pygments"
@@ -152,6 +217,11 @@ python-versions = ">=3.6"
 
 [package.extras]
 plugins = ["importlib-metadata"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "python-lsp-jsonrpc"
@@ -165,7 +235,12 @@ python-versions = "*"
 ujson = ">=3.0.0"
 
 [package.extras]
-test = ["coverage", "pytest-cov", "pytest", "pyflakes", "pycodestyle", "pylint"]
+test = ["coverage", "pycodestyle", "pyflakes", "pylint", "pytest", "pytest-cov"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "pytoolconfig"
@@ -181,10 +256,15 @@ platformdirs = {version = ">=1.4.4", optional = true, markers = "extra == \"glob
 tomli = {version = ">=2.0.1", markers = "python_version < \"3.11\""}
 
 [package.extras]
-doc = ["tabulate (>=0.8.9)", "sphinx (>=4.5.0)"]
-gen_docs = ["sphinx (>=4.5.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx-rtd-theme (>=1.0.0)", "pytoolconfig"]
+doc = ["sphinx (>=4.5.0)", "tabulate (>=0.8.9)"]
+gen-docs = ["pytoolconfig[doc]", "sphinx (>=4.5.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx-rtd-theme (>=1.0.0)"]
 global = ["platformdirs (>=1.4.4)"]
 validation = ["pydantic (>=1.7.4)"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "replit-python-lsp-server"
@@ -200,13 +280,14 @@ pluggy = ">=1.0.0"
 pyflakes = {version = ">=2.5.0,<2.6.0", optional = true, markers = "extra == \"pyflakes\""}
 python-lsp-jsonrpc = ">=1.0.0"
 rope = {version = ">0.10.5", optional = true, markers = "extra == \"rope\""}
+setuptools = ">=39.0.0"
 toml = ">=0.10.2"
 ujson = ">=3.0.0"
 whatthepatch = {version = ">=1.0.2,<2.0.0", optional = true, markers = "extra == \"yapf\""}
 yapf = {version = "*", optional = true, markers = "extra == \"yapf\""}
 
 [package.extras]
-all = ["autopep8 (>=1.6.0,<1.7.0)", "flake8 (>=5.0.0,<5.1.0)", "mccabe (>=0.7.0,<0.8.0)", "pycodestyle (>=2.9.0,<2.10.0)", "pydocstyle (>=2.0.0)", "pyflakes (>=2.5.0,<2.6.0)", "pylint (>=2.5.0)", "rope (>=0.10.5)", "yapf", "whatthepatch"]
+all = ["autopep8 (>=1.6.0,<1.7.0)", "flake8 (>=5.0.0,<5.1.0)", "mccabe (>=0.7.0,<0.8.0)", "pycodestyle (>=2.9.0,<2.10.0)", "pydocstyle (>=2.0.0)", "pyflakes (>=2.5.0,<2.6.0)", "pylint (>=2.5.0)", "rope (>=0.10.5)", "whatthepatch", "yapf"]
 autopep8 = ["autopep8 (>=1.6.0,<1.7.0)"]
 flake8 = ["flake8 (>=5.0.0,<5.1.0)"]
 mccabe = ["mccabe (>=0.7.0,<0.8.0)"]
@@ -215,9 +296,14 @@ pydocstyle = ["pydocstyle (>=2.0.0)"]
 pyflakes = ["pyflakes (>=2.5.0,<2.6.0)"]
 pylint = ["pylint (>=2.5.0)"]
 rope = ["rope (>0.10.5)"]
-test = ["pylint (>=2.5.0)", "pytest", "pytest-cov", "coverage", "numpy (<1.23)", "pandas", "matplotlib", "pyqt5", "flaky"]
+test = ["coverage", "flaky", "matplotlib", "numpy (<1.23)", "pandas", "pylint (>=2.5.0)", "pyqt5", "pytest", "pytest-cov"]
 websockets = ["websockets (>=10.3)"]
-yapf = ["yapf", "whatthepatch (>=1.0.2,<2.0.0)"]
+yapf = ["whatthepatch (>=1.0.2,<2.0.0)", "yapf"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "rich"
@@ -234,6 +320,11 @@ pygments = ">=2.6.0,<3.0.0"
 [package.extras]
 jupyter = ["ipywidgets (>=7.5.1,<8.0.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
 [[package]]
 name = "rope"
 version = "1.7.0"
@@ -246,8 +337,31 @@ python-versions = ">=3.7"
 pytoolconfig = {version = ">=1.2.2", extras = ["global"]}
 
 [package.extras]
-dev = ["pytest (>=7.0.1)", "pytest-timeout (>=2.1.0)", "build (>=0.7.0)", "pre-commit (>=2.20.0)"]
-doc = ["pytoolconfig", "sphinx (>=4.5.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx-rtd-theme (>=1.0.0)"]
+dev = ["build (>=0.7.0)", "pre-commit (>=2.20.0)", "pytest (>=7.0.1)", "pytest-timeout (>=2.1.0)"]
+doc = ["pytoolconfig[doc]", "sphinx (>=4.5.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx-rtd-theme (>=1.0.0)"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
+[[package]]
+name = "setuptools"
+version = "66.1.1"
+description = "Easily download, build, install, upgrade, and uninstall Python packages"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["furo", "jaraco.packaging (>=9)", "jaraco.tidelift (>=1.4)", "pygments-github-lexers (==0.0.5)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-favicon", "sphinx-hoverxref (<2)", "sphinx-inline-tabs", "sphinx-lint", "sphinx-notfound-page (==0.8.3)", "sphinx-reredirects", "sphinxcontrib-towncrier"]
+testing = ["build[virtualenv]", "filelock (>=3.4.0)", "flake8 (<5)", "flake8-2020", "ini2toml[lite] (>=0.9)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "pip (>=19.1)", "pip-run (>=8.8)", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=1.3)", "pytest-flake8", "pytest-mypy (>=0.9.1)", "pytest-perf", "pytest-timeout", "pytest-xdist", "tomli-w (>=1.0.0)", "virtualenv (>=13.0.0)", "wheel"]
+testing-integration = ["build[virtualenv]", "filelock (>=3.4.0)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "pytest", "pytest-enabler", "pytest-xdist", "tomli", "virtualenv (>=13.0.0)", "wheel"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "sympy"
@@ -260,6 +374,11 @@ python-versions = ">=3.8"
 [package.dependencies]
 mpmath = ">=0.19"
 
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
 [[package]]
 name = "toml"
 version = "0.10.2"
@@ -267,6 +386,11 @@ description = "Python Library for Tom's Obvious, Minimal Language"
 category = "dev"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "tomli"
@@ -276,6 +400,11 @@ category = "dev"
 optional = false
 python-versions = ">=3.7"
 
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
 [[package]]
 name = "ujson"
 version = "5.7.0"
@@ -283,6 +412,11 @@ description = "Ultra fast JSON encoder and decoder for Python"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "vyxal"
@@ -297,6 +431,11 @@ num2words = ">=0.5.10,<0.6.0"
 numpy = ">=1.24.1,<2.0.0"
 sympy = ">=1.9,<2.0"
 
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
 [[package]]
 name = "whatthepatch"
 version = "1.0.3"
@@ -304,6 +443,11 @@ description = "A patch parsing and application library."
 category = "dev"
 optional = false
 python-versions = ">=3.7"
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
 
 [[package]]
 name = "yapf"
@@ -313,35 +457,102 @@ category = "dev"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10,<3.11"
-content-hash = "7dd1737e5167b188204c97dabb6d40d4b8a8e7e94aff640a4502c6393c705904"
+content-hash = "17fc4d0d5ad52076d2e838eaa8fa8184e3ef149cd660d1581f56678e88bc2836"
 
 [metadata.files]
-debugpy = []
-docopt = []
-jedi = []
-markdown-it-py = []
-mdurl = []
-mpmath = []
-num2words = []
-numpy = []
-packaging = []
-parso = []
-platformdirs = []
-pluggy = []
-pyflakes = []
-pygments = []
-python-lsp-jsonrpc = []
-pytoolconfig = []
-replit-python-lsp-server = []
-rich = []
-rope = []
-sympy = []
-toml = []
-tomli = []
-ujson = []
-vyxal = []
-whatthepatch = []
-yapf = []
+debugpy = [
+    {file = "debugpy-1.6.6-cp37-cp37m-linux_armv6l.whl", hash = "sha256:02788b24ad9e9ebf279af9beaf35ccdf48a1f4183e0c62a7fe83a7b9a57996ef"},
+    {file = "debugpy-1.6.6-cp37-cp37m-linux_armv7l.whl", hash = "sha256:02788b24ad9e9ebf279af9beaf35ccdf48a1f4183e0c62a7fe83a7b9a57996ef"},
+    {file = "debugpy-1.6.6-cp39-cp39-linux_armv6l.whl", hash = "sha256:37c05e2143e712c334a59d89a7b6bbf7b749b3a2112bef549304f0f59a9ce795"},
+    {file = "debugpy-1.6.6-cp39-cp39-linux_armv7l.whl", hash = "sha256:37c05e2143e712c334a59d89a7b6bbf7b749b3a2112bef549304f0f59a9ce795"},
+]
+docopt = [
+    {file = "docopt-0.6.2-py2.py3-none-any.whl", hash = "sha256:15fde8252aa9f2804171014d50d069ffbf42c7a50b7d74bcbb82bfd5700fcfc2"},
+]
+jedi = [
+    {file = "jedi-0.18.2-py2.py3-none-any.whl", hash = "sha256:2a92cf645c9aed959ddd0f85130343341a9187c120ae01d2ae7cef976418e270"},
+]
+markdown-it-py = [
+    {file = "markdown_it_py-2.1.0-py3-none-any.whl", hash = "sha256:93de681e5c021a432c63147656fe21790bc01231e0cd2da73626f1aa3ac0fe27"},
+]
+mdurl = [
+    {file = "mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"},
+]
+mpmath = [
+    {file = "mpmath-1.2.1-py3-none-any.whl", hash = "sha256:604bc21bd22d2322a177c73bdb573994ef76e62edd595d17e00aff24b0667e5c"},
+]
+num2words = [
+    {file = "num2words-0.5.12-py3-none-any.whl", hash = "sha256:7e603bf805881e48cdf5070db09cde293a030d47c1535022b39b5905b1d7a98d"},
+]
+numpy = [
+    {file = "numpy-1.24.1-cp39-cp39-linux_armv6l.whl", hash = "sha256:e16abb1c4f2093f89f37119305f4cb3fd35dc2f4bacb77143737bb8fcdbd9298"},
+    {file = "numpy-1.24.1-cp39-cp39-linux_armv7l.whl", hash = "sha256:e16abb1c4f2093f89f37119305f4cb3fd35dc2f4bacb77143737bb8fcdbd9298"},
+]
+packaging = [
+    {file = "packaging-23.0-py3-none-any.whl", hash = "sha256:f8b5ed3be5fc926f6cf8dfb3b39c457bbbb619183f2f30a493d50d2ab3cae7d4"},
+]
+parso = [
+    {file = "parso-0.8.3-py2.py3-none-any.whl", hash = "sha256:9c0ab364bdef44019b358a7263f2cad8f68a7df1ac075b54bcde2eee36e38a50"},
+]
+platformdirs = [
+    {file = "platformdirs-2.6.2-py3-none-any.whl", hash = "sha256:83c8f6d04389165de7c9b6f0c682439697887bca0aa2f1c87ef1826be3584490"},
+]
+pluggy = [
+    {file = "pluggy-1.0.0-py2.py3-none-any.whl", hash = "sha256:f2d9abbfd1465ce5d1e261e51cc15afc87ede2ae079c7c7c8d894b1cc37ba123"},
+]
+pyflakes = [
+    {file = "pyflakes-2.5.0-py2.py3-none-any.whl", hash = "sha256:84da203bf30a3deb65d8090047334e6971154d7cc9e0a58cc394752cb63c364f"},
+]
+pygments = [
+    {file = "Pygments-2.14.0-py3-none-any.whl", hash = "sha256:c2fe87a7618b6f4ebdde31913d4e6c1bccf1caf7f0651f659f3acd37a75cba68"},
+]
+python-lsp-jsonrpc = [
+    {file = "python_lsp_jsonrpc-1.0.0-py3-none-any.whl", hash = "sha256:079b143be64b0a378bdb21dff5e28a8c1393fe7e8a654ef068322d754e545fc7"},
+]
+pytoolconfig = [
+    {file = "pytoolconfig-1.2.4-py3-none-any.whl", hash = "sha256:9c829e4ff761f115dde3761b4760b90322c72a5999a8be7c243c703a25e63b14"},
+]
+replit-python-lsp-server = [
+    {file = "replit_python_lsp_server-1.15.9-py3-none-any.whl", hash = "sha256:861aa990e395bf3a54f5fe892df77caaa9803abb3caebe6a59498002b346994b"},
+]
+rich = [
+    {file = "rich-13.2.0-py3-none-any.whl", hash = "sha256:8e8841b66c69d29ac50fb37e0600d3a293b9340aa0835b94da3601e4c9c77fe7"},
+]
+rope = [
+    {file = "rope-1.7.0-py3-none-any.whl", hash = "sha256:2b3aae460a4841e543a5fdb06b4bdbb609bcc068c38af776e5b9374b6390ac4e"},
+]
+setuptools = [
+    {file = "setuptools-66.1.1-py3-none-any.whl", hash = "sha256:845d2eb3d1e303745a3e2557c130aa5abba834dd6913be3657d1db6dec0ad06a"},
+]
+sympy = [
+    {file = "sympy-1.11.1-py3-none-any.whl", hash = "sha256:24913080377bb4fe5522858166e50eea4a78d2cdf7748fdf4ad18d11609eea3d"},
+]
+toml = [
+    {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
+]
+tomli = [
+    {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
+]
+ujson = [
+    {file = "ujson-5.7.0-cp37-cp37m-linux_armv6l.whl", hash = "sha256:ab0525fa8afe39546bf7ba0444a41d736d548d2f3dea8e75ebd4898cfa2b9350"},
+    {file = "ujson-5.7.0-cp37-cp37m-linux_armv7l.whl", hash = "sha256:ab0525fa8afe39546bf7ba0444a41d736d548d2f3dea8e75ebd4898cfa2b9350"},
+    {file = "ujson-5.7.0-cp39-cp39-linux_armv6l.whl", hash = "sha256:8fd2bd5b35b31cb98211a55cd80c9040eac567f28c75ed668ad88761b69454f9"},
+    {file = "ujson-5.7.0-cp39-cp39-linux_armv7l.whl", hash = "sha256:8fd2bd5b35b31cb98211a55cd80c9040eac567f28c75ed668ad88761b69454f9"},
+]
+vyxal = [
+    {file = "vyxal-2.19.0-py3-none-any.whl", hash = "sha256:bab1ea3a0b104e51507259b6c1528c3c6e940eb4ee06d1cf43ffb7ffb51dec38"},
+]
+whatthepatch = [
+    {file = "whatthepatch-1.0.3-py3-none-any.whl", hash = "sha256:44804f156b50dd358c8dfcd4b7b3cc850ab9bd5e880f8c8370cf57c2b3ba9b90"},
+]
+yapf = [
+    {file = "yapf-0.32.0-py2.py3-none-any.whl", hash = "sha256:5efc4e0ebda54729c1afd5bfed6705700f65d1aaba365a38ea1385283cc48b7a"},
+]
