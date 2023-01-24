@@ -54,7 +54,6 @@ class CrosshatchREPL:
                     self.console.print(f"[dim]|[/dim]  ", end = "")
                 self.console.print(line)
     def runVyxal(self, vyxal):
-        self.lineno += 1
         vyxal = "\n".join(vyxal)
         code = transpile(vyxal, self.transpilationOpts)
         try:
@@ -71,6 +70,7 @@ class CrosshatchREPL:
                     self.console.print(f"[bold green]{self.lineno}[/bold green] => ", end = "")
                     self.console.print(line)
             self.stack.clear()
+        self.lineno += 1
 
     def runCommand(self, command):
         self.console.print(Control((ControlType.CURSOR_UP, 1), (ControlType.ERASE_IN_LINE, 2), (ControlType.CURSOR_MOVE_TO_COLUMN, 0)))
