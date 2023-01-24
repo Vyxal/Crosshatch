@@ -2,6 +2,7 @@ from rich.columns import Columns
 from rich.text import Text
 
 from functools import partial
+from sys import version as pyVersion
 
 from crosshatch.const import VYXAL_VERSION, HELP, GOODBYE, __version__
 
@@ -27,13 +28,19 @@ def command(name, description, nargs = 0):
 
 @command("help", "Prints this text.")
 def help(repl):
+    repl.console.rule()
     repl.console.print(HELP.format(
-        version = __version__,
         vyxal_version = VYXAL_VERSION
     ))
     for name, command in COMMANDS.items():
         repl.console.print(Text("##" + name, style = "dim"), "-", command[1])
+    repl.console.print()
 @command("exit", "Exit the REPL.")
 def exitCommand(repl):
     repl.console.print(GOODBYE)
     exit(0)
+@command("version", "Print version information")
+def version(repl):
+    repl.console.print(f"[bold purple]Vyxal {VYXAL_VERSION}")
+    repl.console.print(f"[blue]Crosshatch {__version__}")
+    repl.console.print(f"Python {pyVersion}\n")

@@ -10,8 +10,9 @@ EOF or [dim]##exit[/dim] to exit.\n'''
 
 GOODBYE = "\n[dim italic]See you, space cowboy..."
 
-HELP = '''This is Crosshatch Repl [cyan]{version}[/cyan] using [bold purple]Vyxal {vyxal_version}[/bold purple].
+HELP = '''Welcome to [bold purple]Vyxal {vyxal_version}[/bold purple]!
 To run Vyxal code, simply enter it into the prompt. It will be run automatically.
+If you want to run multiline code, put two spaces at the end of a line. Enter a blank line to run.
 
 List of commands:
 '''
