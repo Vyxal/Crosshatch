@@ -8,7 +8,8 @@ import vyxal.elements
 import vyxal.helpers
 
 import sys
-import readline
+if not (sys.platform.startswith("win32") or sys.platform.startswith("cygwin")):
+    import readline
 import traceback
 
 from crosshatch.highlighter import VYXAL_DEFAULT, VyxalHighlighter
