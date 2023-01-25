@@ -86,7 +86,7 @@ class CrosshatchREPL:
         commandList = []
         while True:
             try:
-                command = input(f"[{self.lineno}] ..." if len(commandList) else f"[{self.lineno}] vyxal> ")
+                command = input(f"[{self.lineno}] ... " if len(commandList) else f"[{self.lineno}] vyxal> ")
             except KeyboardInterrupt:
                 self.console.print(Control((ControlType.ERASE_IN_LINE, 2), (ControlType.CURSOR_MOVE_TO_COLUMN, 0)), end = "")
                 continue
