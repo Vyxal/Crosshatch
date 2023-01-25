@@ -24,9 +24,6 @@ VYXAL_DEFAULT = Theme(VYXAL_DEFAULT)
 class VyxalHighlighter(RegexHighlighter):
     base_style = "vyxal."
     highlights = [
-        r"(?P<comment>(#.*$))",
-        
-
         r"(?P<list_sep>\|)(?=[^⟨]*⟩)",
         r"((?P<list>⟨)|(?P<list_end>⟩))",
         
@@ -43,5 +40,6 @@ class VyxalHighlighter(RegexHighlighter):
         r"(?P<function>[λƛ⟑µ⁽‡≬']|(¨3)|(¨2)|(¨₂)|(¨₃)).*(?P<function_end>;)",
 
         r"(?P<function>@[a-zA-Z_]+(\:([a-zA-Z_]|\d)+)*\|).*(?P<function_end>;)",
-        r"(?P<function>[a-zA-Z_]+;)",
+
+        r"(?P<comment>(#.*$))",
     ]
