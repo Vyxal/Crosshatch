@@ -13,7 +13,7 @@ To get Crosshatch, simply install it with pip:
 ```
 pip install crosshatch
 ```
-
+--> 
 If you want to work on Crosshatch, you can also use poetry. First, download this repository and unzip it. Alternatively, you can open it with Github Desktop or clone it via git.
 
 Then, you'll need to install [Poetry](https://python-poetry.org/), which is the packing tool used for Crosshatch.
