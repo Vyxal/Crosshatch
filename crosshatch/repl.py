@@ -41,7 +41,7 @@ class CrosshatchREPL:
         self.console.print(
             Control((ControlType.CURSOR_UP, 1), (ControlType.ERASE_IN_LINE, 2))
         )
-        self.console.print(f"[bold purple]{self.lineno}[/bold purple] <= ", end="")
+        self.console.print(f"[[bold purple]{self.lineno}[/bold purple]] <=  ", end="")
         self.console.print(self.vyxalHighlighter(command), end="")
         self.console.print(
             Control(
@@ -52,7 +52,7 @@ class CrosshatchREPL:
 
     def printErrorTraceback(self, tb, vyxal, code):
         self.console.print(
-            f"[bold red]{self.lineno}[/bold red] <= {self.vyxalHighlighter(vyxal)}"
+            f"[[bold red]{self.lineno}[/bold red]] <=  {self.vyxalHighlighter(vyxal)}"
         )
         for x in range(len(vyxal) + len(str(self.lineno)) + 4):
             if x - len(str(self.lineno)) - 4 == tb.lineno - 1:
@@ -86,7 +86,7 @@ class CrosshatchREPL:
             for item in self.stack:
                 for line in self.pythonHighlighter(repr(item)).split():
                     self.console.print(
-                        f"[bold green]{self.lineno}[/bold green] => ", end=""
+                        f"[[bold green]{self.lineno}[/bold green]] =>  ", end=""
                     )
                     self.console.print(line)
             self.stack.clear()
@@ -100,7 +100,9 @@ class CrosshatchREPL:
                 (ControlType.CURSOR_MOVE_TO_COLUMN, 0),
             )
         )
-        self.console.print(f"<= [dim]{command}")
+        self.console.print(
+            f"[[bold purple]{self.lineno}[/bold purple]] <=  [dim]{command}"
+        )
         command, *args = command.lstrip("#").split(" ")
         if command not in COMMANDS:
             self.console.print(f"[red]Unknown command {command}")
@@ -112,10 +114,10 @@ class CrosshatchREPL:
         commandList = []
         while True:
             try:
-                command = input(
+                command = self.console.input(
                     f"[{self.lineno}] ... "
                     if len(commandList)
-                    else f"[{self.lineno}] vyxal> "
+                    else f"[[bold purple]{self.lineno}[/bold purple]] vy> "
                 )
             except KeyboardInterrupt:
                 self.console.print(
