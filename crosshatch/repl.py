@@ -41,9 +41,7 @@ class CrosshatchREPL:
         self.console.print(
             Control((ControlType.CURSOR_UP, 1), (ControlType.ERASE_IN_LINE, 2))
         )
-        self.console.print(
-            f"[bold purple]{self.lineno}[/bold purple] <= ", end=""
-        )
+        self.console.print(f"[bold purple]{self.lineno}[/bold purple] <= ", end="")
         self.console.print(self.vyxalHighlighter(command), end="")
         self.console.print(
             Control(
@@ -137,9 +135,7 @@ class CrosshatchREPL:
                     self.console.print("we do a little trolling")
                     import webbrowser
 
-                    webbrowser.open(
-                        "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                    )
+                    webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
                     continue
                 if command.startswith("##"):
                     self.runCommand(command)
