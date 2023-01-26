@@ -8,6 +8,7 @@ import vyxal.elements
 import vyxal.helpers
 
 import sys
+
 if not (sys.platform.startswith("win32") or sys.platform.startswith("cygwin")):
     import readline
 import traceback
@@ -16,9 +17,10 @@ from crosshatch.highlighter import VYXAL_DEFAULT, VyxalHighlighter
 from crosshatch.const import GREETING, GOODBYE
 from crosshatch.commands import COMMANDS
 
+
 class CrosshatchREPL:
     def __init__(self):
-        self.console = Console(highlight = False, theme = VYXAL_DEFAULT)
+        self.console = Console(highlight=False, theme=VYXAL_DEFAULT)
         self.transpilationOpts = TranspilationOptions()
         self.ctx = Context()
         self.ctx.repl_mode = True
@@ -29,31 +31,46 @@ class CrosshatchREPL:
         self.lineno = 0
 
     def prepareLocals(self):
-        return {
-            "stack": self.stack,
-            "ctx": self.ctx
-        } | vyxal.elements.__dict__ | vyxal.helpers.__dict__
+        return (
+            {"stack": self.stack, "ctx": self.ctx}
+            | vyxal.elements.__dict__
+            | vyxal.helpers.__dict__
+        )
+
     def highlightCommand(self, command: str):
-        self.console.print(Control((ControlType.CURSOR_UP, 1), (ControlType.ERASE_IN_LINE, 2)))
-        self.console.print(f"[bold purple]{self.lineno}[/bold purple] <= ", end = "")
-        self.console.print(self.vyxalHighlighter(command), end = "")
-        self.console.print(Control((ControlType.CURSOR_MOVE_TO_COLUMN, 0), (ControlType.CURSOR_DOWN, 1),))
+        self.console.print(
+            Control((ControlType.CURSOR_UP, 1), (ControlType.ERASE_IN_LINE, 2))
+        )
+        self.console.print(
+            f"[bold purple]{self.lineno}[/bold purple] <= ", end=""
+        )
+        self.console.print(self.vyxalHighlighter(command), end="")
+        self.console.print(
+            Control(
+                (ControlType.CURSOR_MOVE_TO_COLUMN, 0),
+                (ControlType.CURSOR_DOWN, 1),
+            )
+        )
+
     def printErrorTraceback(self, tb, vyxal, code):
-        self.console.print(f"[bold red]{self.lineno}[/bold red] <= {self.vyxalHighlighter(vyxal)}")
+        self.console.print(
+            f"[bold red]{self.lineno}[/bold red] <= {self.vyxalHighlighter(vyxal)}"
+        )
         for x in range(len(vyxal) + len(str(self.lineno)) + 4):
             if x - len(str(self.lineno)) - 4 == tb.lineno - 1:
-                self.console.print("[bold red]^[/bold red]", end = "")
+                self.console.print("[bold red]^[/bold red]", end="")
             else:
-                self.console.print("[dim]~[/dim]", end = "")
+                self.console.print("[dim]~[/dim]", end="")
         self.console.print()
         self.console.print(f"[bold red]Error on line {tb.lineno}")
         for c, codeline in enumerate(self.pythonHighlighter(code).split(), 1):
             for line in codeline.wrap(self.console, self.console.width - 3):
                 if c == tb.lineno:
-                    self.console.print(f"[bold red]|>[/bold red] ", end = "")
+                    self.console.print(f"[bold red]|>[/bold red] ", end="")
                 else:
-                    self.console.print(f"[dim]|[/dim]  ", end = "")
+                    self.console.print(f"[dim]|[/dim]  ", end="")
                 self.console.print(line)
+
     def runVyxal(self, vyxal):
         vyxal = "\n".join(vyxal)
         code = transpile(vyxal, self.transpilationOpts)
@@ -64,17 +81,27 @@ class CrosshatchREPL:
         except Exception as e:
             tb = traceback.extract_tb(sys.exc_info()[-1])[-1]
             self.printErrorTraceback(tb, vyxal, code)
-            self.console.print(traceback.format_exc().splitlines()[-1], style = "bold red")
+            self.console.print(
+                traceback.format_exc().splitlines()[-1], style="bold red"
+            )
         else:
             for item in self.stack:
                 for line in self.pythonHighlighter(repr(item)).split():
-                    self.console.print(f"[bold green]{self.lineno}[/bold green] => ", end = "")
+                    self.console.print(
+                        f"[bold green]{self.lineno}[/bold green] => ", end=""
+                    )
                     self.console.print(line)
             self.stack.clear()
         self.lineno += 1
 
     def runCommand(self, command):
-        self.console.print(Control((ControlType.CURSOR_UP, 1), (ControlType.ERASE_IN_LINE, 2), (ControlType.CURSOR_MOVE_TO_COLUMN, 0)))
+        self.console.print(
+            Control(
+                (ControlType.CURSOR_UP, 1),
+                (ControlType.ERASE_IN_LINE, 2),
+                (ControlType.CURSOR_MOVE_TO_COLUMN, 0),
+            )
+        )
         self.console.print(f"<= [dim]{command}")
         command, *args = command.lstrip("#").split(" ")
         if command not in COMMANDS:
@@ -87,26 +114,45 @@ class CrosshatchREPL:
         commandList = []
         while True:
             try:
-                command = input(f"[{self.lineno}] ... " if len(commandList) else f"[{self.lineno}] vyxal> ")
+                command = input(
+                    f"[{self.lineno}] ... "
+                    if len(commandList)
+                    else f"[{self.lineno}] vyxal> "
+                )
             except KeyboardInterrupt:
-                self.console.print(Control((ControlType.ERASE_IN_LINE, 2), (ControlType.CURSOR_MOVE_TO_COLUMN, 0)), end = "")
+                self.console.print(
+                    Control(
+                        (ControlType.ERASE_IN_LINE, 2),
+                        (ControlType.CURSOR_MOVE_TO_COLUMN, 0),
+                    ),
+                    end="",
+                )
                 continue
             except EOFError:
                 self.console.print(GOODBYE)
                 break
             else:
-                
+
                 if command == "lyxal":
                     self.console.print("we do a little trolling")
                     import webbrowser
-                    webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+
+                    webbrowser.open(
+                        "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    )
                     continue
                 if command.startswith("##"):
                     self.runCommand(command)
                 else:
                     if len(commandList):
                         if command == "":
-                            self.console.print(Control((ControlType.CURSOR_UP, 1), (ControlType.ERASE_IN_LINE, 2), (ControlType.CURSOR_MOVE_TO_COLUMN, 0)))
+                            self.console.print(
+                                Control(
+                                    (ControlType.CURSOR_UP, 1),
+                                    (ControlType.ERASE_IN_LINE, 2),
+                                    (ControlType.CURSOR_MOVE_TO_COLUMN, 0),
+                                )
+                            )
                             self.runVyxal(commandList)
                             commandList.clear()
                         else:
@@ -118,5 +164,3 @@ class CrosshatchREPL:
                         if not command.endswith("  "):
                             self.runVyxal(commandList)
                             commandList.clear()
-                        
-                    
