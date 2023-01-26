@@ -44,7 +44,7 @@ Or if you want to do development work on it:
 poetry run crosshatch
 ```
 
-After starting crosshatch, you'll see something like the following:
+After starting Crosshatch, you'll see something like the following:
 
 ```
 Vyxal 2.19.0 using Python 3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)] on win32.
