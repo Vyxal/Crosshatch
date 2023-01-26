@@ -6,7 +6,15 @@ Ever wanted to use [Vyxal](https://github.com/Vyxal/Vyxal), but found that the d
 
 ## Installation
 
-First download this repository and unzip it. Alternatively, you can open it with Github Desktop or clone it via git.
+<!-- Uncomment when on PyPi
+
+To get Crosshatch, simply install it with pip:
+
+```
+pip install crosshatch
+```
+
+If you want to work on Crosshatch, you can also use poetry. First, download this repository and unzip it. Alternatively, you can open it with Github Desktop or clone it via git.
 
 Then, you'll need to install [Poetry](https://python-poetry.org/), which is the packing tool used for Crosshatch.
 
@@ -27,10 +35,16 @@ and it will take care of installing all the required dependencies.
 To run Crosshatch:
 
 ```
-poetry run Crosshatch
+crosshatch
 ```
 
-From there, you'll see something like the following:
+Or if you want to do development work on it:
+
+```
+poetry run crosshatch
+```
+
+After starting crosshatch, you'll see something like the following:
 
 ```
 Vyxal 2.19.0 using Python 3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)] on win32.
