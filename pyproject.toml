@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "crosshatch"
-version = "0.1.0"
+version = "1.0.0"
 description = "A pretty REPL for Vyxal."
 authors = ["Ginger <75683114+GingerIndustries@users.noreply.github.com>"]
 

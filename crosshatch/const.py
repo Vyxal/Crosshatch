@@ -1,7 +1,7 @@
 import importlib.metadata
 import sys
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 VYXAL_VERSION = importlib.metadata.version("vyxal")
 
 GREETING = f"""[bold purple]Vyxal {VYXAL_VERSION}[/bold purple] using Python {sys.version} on {sys.platform}. 
