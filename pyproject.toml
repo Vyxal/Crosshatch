@@ -2,6 +2,8 @@
 name = "crosshatch"
 version = "1.0.0"
 description = "A pretty REPL for Vyxal."
+readme = "README.md"
+repository = "https://github.com/Vyxal/Crosshatch"
 authors = ["Ginger <75683114+GingerIndustries@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
