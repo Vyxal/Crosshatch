@@ -2,7 +2,7 @@
 
 ![Crosshatch Logo](logo.png)
 
-Ever wanted to use [Vyxal](https://github.com/Vyxal/Vyxal), but found that the default REPL was lacking in features and that the online interpreter wasn't interactive enough? Well now there's a solution to all your read-execute-print-loop needs! Crosshatch is designed to be easy to use, visually appealing and highly interoperatable with the Vyxal programming language. 
+Ever wanted to use [Vyxal](https://github.com/Vyxal/Vyxal), but found that the default REPL was lacking in features and that the online interpreter wasn't interactive enough? Well now there's a solution to all your read-execute-print-loop needs! Crosshatch is designed to be easy to use, visually appealing and highly interoperable with the Vyxal programming language. 
 
 ## Installation
 
@@ -16,7 +16,7 @@ pip install crosshatch
 --> 
 If you want to work on Crosshatch, you can also use poetry. First, download this repository and unzip it. Alternatively, you can open it with Github Desktop or clone it via git.
 
-Then, you'll need to install [Poetry](https://python-poetry.org/), which is the packing tool used for Crosshatch.
+Then, you'll need to install [Poetry](https://python-poetry.org/), which is the packaging tool used for Crosshatch.
 
 ```
 pip install poetry

@@ -130,7 +130,6 @@ class CrosshatchREPL:
                 self.console.print(GOODBYE)
                 break
             else:
-
                 if command == "lyxal":
                     self.console.print("we do a little trolling")
                     import webbrowser
