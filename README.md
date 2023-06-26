@@ -1,6 +1,4 @@
-# Crosshatch
-
-![Crosshatch Logo](logo.png)
+![Crosshatch Logo](banner.png)
 
 Ever wanted to use [Vyxal](https://github.com/Vyxal/Vyxal), but found that the default REPL was lacking in features and that the online interpreter wasn't interactive enough? Well now there's a solution to all your read-execute-print-loop needs! Crosshatch is designed to be easy to use, visually appealing and highly interoperable with the Vyxal programming language. 
 
